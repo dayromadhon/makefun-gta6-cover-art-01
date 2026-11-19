@@ -3,20 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cover Snap</title>
+<title>Sunset Cover Studio — GTA 6-style cover maker</title>
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <main class="app">
-  <section class="controls">
-    <h1>Cover Snap</h1>
-    <p>A photo and a caption, made into a square cover.</p>
-    <label>Photo <input id="photo" type="file" accept="image/*"></label>
-    <label>Caption <input id="caption" type="text" maxlength="40" value="Sunset Heist"></label>
-    <button id="export" type="button">Export PNG 1080 x 1080</button>
+  <section class="controls" aria-label="Cover controls">
+    <h1>Sunset Cover Studio</h1>
+    <p class="tagline">Your photo, a caption, a Vice City sunset — a GTA&nbsp;6-style cover in three steps. Photos stay on your machine; nothing is uploaded.</p>
+
+    <fieldset>
+      <legend>1 · Post size</legend>
+      <div class="sizes" role="group" aria-label="Post size">
+        <button type="button" class="size-btn is-active" data-size="square">Square<br><span>1080 × 1080</span></button>
+        <button type="button" class="size-btn" data-size="portrait">Portrait<br><span>1080 × 1350</span></button>
+        <button type="button" class="size-btn" data-size="wide">Wide<br><span>1920 × 1080</span></button>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>2 · Caption</legend>
+      <label>Title
+        <input id="caption" type="text" maxlength="28" value="Sunset Heist" autocomplete="off">
+      </label>
+      <label>Subtitle
+        <input id="subtitle" type="text" maxlength="40" value="Leonida • Vice City" autocomplete="off">
+      </label>
+      <div class="row">
+        <span class="row-label">Title sits</span>
+        <label class="choice"><input type="radio" name="pos" value="bottom" checked> Bottom</label>
+        <label class="choice"><input type="radio" name="pos" value="top"> Top</label>
+      </div>
+      <div class="row">
+        <span class="row-label">Colour grade</span>
+        <label class="choice"><input type="radio" name="theme" value="sunset" checked> Sunset</label>
+        <label class="choice"><input type="radio" name="theme" value="neon"> Neon</label>
+        <label class="choice"><input type="radio" name="theme" value="vice"> Vice Nights</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>3 · Photos — click a panel in the preview to pick it</legend>
+      <div id="panels" class="panels"></div>
+      <div class="panel-tools">
+        <label class="zoom-label">Zoom the selected panel
+          <input id="zoom" type="range" min="1" max="2.5" step="0.01" value="1">
+        </label>
+        <div class="row">
+          <button id="fill-all" type="button" class="secondary">Use this photo in all panels</button>
+          <button id="reset-crop" type="button" class="secondary">Reset crop</button>
+        </div>
+      </div>
+    </fieldset>
+
+    <button id="export" type="button" class="export">Export PNG</button>
     <p id="status" role="status"></p>
+    <p class="fineprint">Sample photos are original illustrations made for this app. The lettering font is Noto Sans Condensed Black (SIL Open Font License). No Rockstar Games logo, artwork or font is used.</p>
   </section>
-  <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+
+  <section class="stage" aria-label="Cover preview">
+    <div class="canvas-wrap" id="canvas-wrap">
+      <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+      <canvas id="overlay" width="1080" height="1080" aria-hidden="true"></canvas>
+    </div>
+    <p class="hint">Drag the photo inside the selected panel to move it. Click any panel to select it.</p>
+  </section>
 </main>
 <script type="module" src="./src/main.js"></script>
 </body>

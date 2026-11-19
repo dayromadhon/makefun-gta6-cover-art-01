@@ -7,6 +7,10 @@
 // are free to use. Build your own GTA-style cover maker in its place, put your 3 or 4 PNG or JPEG screenshots in
 // screenshots/ (the first by name is the cover) and run it.
 //
+// Built in the recorded session: Sunset Cover Studio — a four-panel cover maker
+// (hero + three panels, per-panel crop and zoom, three post sizes, three grades)
+// in app/, with four screenshots in screenshots/ (first by name is the cover).
+//
 // Serve it locally with `node serve.ts`, then open http://localhost:8080.
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts

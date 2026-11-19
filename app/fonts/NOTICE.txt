@@ -1,0 +1,15 @@
+Noto Sans Condensed Black — font notice
+========================================
+
+File: NotoSans-CondensedBlack.ttf
+Source: Noto Sans, Copyright 2015 Google LLC
+License: SIL Open Font License, Version 1.1 (OFL-1.1)
+
+This font is free software, licensed under the SIL Open Font License,
+Version 1.1. It may be used, studied, modified and redistributed under
+the terms of that license. The full license text is published at
+https://openfontlicense.org/ (SIL Open Font License 1.1).
+
+The font is used here only to draw the cover caption lettering. It is
+an original, freely licensed typeface — it is not a Rockstar Games font
+and it is not taken from any game.
