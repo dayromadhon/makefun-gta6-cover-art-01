@@ -1,5 +1,9 @@
 # Sunset Cover Studio — make.fun bounty `gta6-cover-art-01`
 
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/dayromadhon/makefun-gta6-cover-art-01/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/dayromadhon/makefun-gta6-cover-art-01/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+
 A web app that turns your photo and a caption into GTA 6-style cover art and
 exports it as a PNG. Built for the [make.fun](https://make.fun/bounty/gta6-cover-art-01)
 bounty **Make GTA 6 Cover Art** (`gta6-cover-art-01`).
@@ -51,3 +55,8 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 - Lettering font: Noto Sans Condensed Black, © 2015 Google LLC, licensed
   under the SIL Open Font License 1.1 (see `app/fonts/NOTICE.txt`).
 - No Rockstar Games logo, wordmark, artwork, character or font is used.
+
+---
+
+Built for the [make.fun bounty **Make GTA 6 Cover Art**](https://make.fun/bounty/gta6-cover-art-01) (`gta6-cover-art-01`).
+Try make.fun yourself: https://make.fun/?ref=sf3mmt2f&utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01
